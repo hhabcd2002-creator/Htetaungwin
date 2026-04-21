@@ -1,84 +1,119 @@
 :root {
-    --bg-color: #0d0e12;
-    --card-bg: #16181d;
+    --bg-color: #050609;
+    --card-bg: #111419;
     --gold: #c5a059;
-    --gold-bright: #e5c07b;
+    --gold-bright: #f1d392;
     --text-primary: #f0f0f0;
-    --text-dim: #a0a0a0;
+    --text-dim: #999;
+    --academic-font: 'Cinzel', serif;
+    --body-font: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--body-font);
     background-color: var(--bg-color);
     color: var(--text-primary);
     margin: 0;
-    line-height: 1.6;
+    overflow-x: hidden;
+    line-height: 1.7;
 }
 
+/* 1. Particle Background (From Video) */
+#particles-js {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 0;
+}
+
+.main-wrapper { position: relative; z-index: 1; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-/* Header & Hero */
+/* 2. Header & Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), radial-gradient(circle at top right, #1e222b, #0d0e12);
-    padding: 100px 0;
+    background: radial-gradient(circle at top right, rgba(26,30,43,0.8), rgba(5,6,9,1));
+    padding: 120px 0 80px 0;
     border-bottom: 1px solid var(--gold);
 }
 
-.hero-container { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
+.hero-container { display: flex; align-items: center; gap: 70px; flex-wrap: wrap; }
 
-.frame {
+.profile-frame {
     width: 250px; height: 320px;
-    border: 1px solid var(--gold);
+    border: 1px solid rgba(197, 160, 89, 0.5);
     padding: 10px;
     background: #000;
+    position: relative;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
 }
 
-.frame img { width: 100%; height: 100%; object-fit: cover; }
+.profile-img { width: 100%; height: 100%; object-fit: cover; }
+.frame-glow {
+    position: absolute; inset: -1px;
+    border: 2px solid var(--gold);
+    filter: blur(15px); opacity: 0.3;
+}
 
-h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; margin: 10px 0; letter-spacing: 2px; color: #fff; }
-.gold { color: var(--gold); }
-.title-gold { color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.4rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+h1 { font-family: var(--academic-font); font-size: 3.5rem; margin: 10px 0; letter-spacing: 2px; color: #fff; }
+.gold-text { color: var(--gold); font-weight: 600; letter-spacing: 3px; font-size: 0.9rem; text-transform: uppercase; }
+.university { font-style: italic; color: var(--text-dim); }
 
-.university { font-family: 'Lora', serif; font-style: italic; font-size: 1.2rem; color: var(--text-dim); }
+.contact-strip { margin: 25px 0; font-size: 0.9rem; color: var(--text-dim); }
+.contact-strip span { margin-right: 30px; }
+.contact-strip i { color: var(--gold); margin-right: 10px; }
 
-.contact-info { margin: 20px 0; font-size: 0.9rem; color: var(--text-dim); }
-.contact-info span { margin-right: 25px; }
-.contact-info i { color: var(--gold); margin-right: 8px; }
+/* 3. Buttons (Gold & Outline) */
+.action-buttons { display: flex; gap: 15px; margin-top: 30px; }
+.btn { padding: 14px 30px; border-radius: 2px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; cursor: pointer; display: inline-block; }
+.btn-gold { background: var(--gold); color: #000; border: none; }
+.btn-gold:hover { background: var(--gold-bright); transform: translateY(-3px); box-shadow: 0 5px 20px rgba(197, 160, 89, 0.4); }
+.btn-outline { border: 1.5px solid var(--gold); color: var(--gold); background: transparent; }
+.btn-outline:hover { background: rgba(197, 160, 89, 0.1); }
 
-/* Buttons */
-.hero-actions { display: flex; gap: 15px; margin-top: 30px; }
-.btn { padding: 12px 30px; border-radius: 2px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-.btn-primary { background: var(--gold); color: #000; }
-.btn-primary:hover { background: var(--gold-bright); transform: translateY(-3px); }
-.btn-secondary { border: 1px solid var(--gold); color: var(--gold); }
-.btn-secondary:hover { background: rgba(197, 160, 89, 0.1); }
+/* 4. Content Grid */
+.content-grid { display: grid; grid-template-columns: 2fr 1.2fr; gap: 40px; margin-top: 40px; }
 
-/* Layout Grid */
-.academic-grid { display: grid; grid-template-columns: 2fr 1.2fr; gap: 40px; margin-top: 40px; }
+.card { background-color: var(--card-bg); padding: 40px; border-radius: 5px; margin-bottom: 30px; position: relative; z-index: 1; transition: transform 0.3s; }
+.card:hover { transform: translateY(-5px); }
 
-.card { background-color: var(--card-bg); padding: 40px; border-radius: 4px; margin-bottom: 30px; border: 1px solid #222; }
+.title-gold { color: var(--gold); font-family: var(--academic-font); font-size: 1.5rem; border-bottom: 1px solid #222; padding-bottom: 15px; margin-bottom: 25px; display: flex; align-items: center; gap: 10px; }
 
-.summary-text { font-family: 'Lora', serif; font-size: 1.1rem; color: #ccc; }
+/* 5. Gold Flow Border Animation (From Video) */
+.animated-border::before {
+    content: '';
+    position: absolute; inset: 0;
+    border-radius: 5px;
+    padding: 2px; /* Border Thickness */
+    background: linear-gradient(90deg, #000, #000, var(--gold), #000, #000);
+    background-size: 300% 100%;
+    animation: flowBorder 6s linear infinite;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+@keyframes flowBorder {
+    0% { background-position: 100% 0; }
+    100% { background-position: -200% 0; }
+}
 
 .academic-list { padding-left: 20px; color: var(--text-dim); }
 .academic-list li { margin-bottom: 12px; }
 
-.project-item { border-left: 3px solid var(--gold); padding-left: 20px; margin-bottom: 25px; }
+/* Skills & Toolkit */
+.tag { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 6px 15px; font-size: 0.8rem; margin: 5px; text-transform: uppercase; font-weight: 600; }
 
-.skill-tag { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 5px 12px; font-size: 0.8rem; margin: 5px; text-transform: uppercase; }
+.toolkit-list { list-style: none; padding: 0; color: var(--text-dim); }
+.toolkit-list li { margin-bottom: 15px; display: flex; align-items: center; gap: 12px; }
+.toolkit-list i { color: var(--gold); font-size: 1.1rem; }
 
-.tool-list { list-style: none; padding: 0; color: var(--text-dim); }
-.tool-list li { margin-bottom: 15px; }
-.tool-list i { color: var(--gold); margin-right: 12px; }
-
-/* Contact Form */
-input, textarea { width: 100%; background: #000; border: 1px solid #333; padding: 12px; color: #fff; margin-bottom: 15px; box-sizing: border-box; font-family: inherit; }
+/* 6. Form Handlers */
+input, textarea { width: 100%; background: rgba(0,0,0,0.5); border: 1px solid #333; padding: 15px; color: white; margin-bottom: 15px; box-sizing: border-box; font-family: inherit; }
 .full-width { width: 100%; cursor: pointer; border: none; }
 
-.site-footer { text-align: center; padding: 60px 0; border-top: 1px solid #222; color: var(--text-dim); font-size: 0.8rem; letter-spacing: 2px; }
+footer { text-align: center; padding: 60px 0; border-top: 1px solid #111; color: var(--text-dim); font-size: 0.8rem; letter-spacing: 2px; position: relative; z-index: 1; }
 
 @media (max-width: 900px) {
-    .academic-grid { grid-template-columns: 1fr; }
+    .content-grid { grid-template-columns: 1fr; }
     .hero-container { flex-direction: column; text-align: center; }
+    .profile-frame { width: 200px; height: 260px; }
     h1 { font-size: 2.5rem; }
 }
