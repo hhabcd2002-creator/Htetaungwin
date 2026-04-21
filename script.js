@@ -10,35 +10,7 @@ particlesJS("particles-js", {
   }
 });
 
-// Form Submission
-const form = document.getElementById("contact-form");
-const status = document.getElementById("form-status");
-
-form.onsubmit = async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector("button");
-    btn.innerText = "Sending...";
-    
-    const data = new FormData(form);
-    const response = await fetch(form.action, {
-        method: 'POST',
-        body: data,
-        headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-        status.innerText = "Formal Inquiry Sent Successfully!";
-        status.style.color = "#c5a059";
-        form.reset();
-        btn.innerText = "Send Message";
-    } else {
-        status.innerText = "Error. Please try again.";
-        status.style.color = "red";
-        btn.innerText = "Send Message";
-    }
-};
-
-// Scroll Reveal
+// Scroll Reveal Animation
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
