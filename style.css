@@ -35,57 +35,53 @@ body {
 
 .hero-container { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
 
-/* Profile Image Fix */
 .profile-frame {
-    width: 280px;
-    height: 350px;
+    width: 280px; height: 350px;
     border: 1px solid var(--gold);
-    padding: 10px;
-    background: #000;
-    position: relative;
-    overflow: hidden;
+    padding: 10px; background: #000;
+    position: relative; overflow: hidden;
 }
 
-.profile-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.frame-glow {
-    position: absolute; inset: 0;
-    box-shadow: inset 0 0 30px rgba(197, 160, 89, 0.3);
-    pointer-events: none;
-}
+.profile-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 h1 { font-family: var(--academic-font); font-size: 3.2rem; margin: 10px 0; letter-spacing: 2px; }
 .gold-text { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; }
 .university { font-style: italic; color: var(--text-dim); }
 
+.contact-strip { margin: 25px 0; font-size: 0.9rem; color: var(--text-dim); }
+.contact-strip span { margin-right: 25px; }
+.contact-strip i { color: var(--gold); margin-right: 8px; }
+
 /* Buttons */
 .action-buttons { display: flex; gap: 15px; margin-top: 30px; }
-.btn { padding: 12px 25px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; cursor: pointer; border-radius: 2px; }
+.btn { padding: 12px 25px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border-radius: 2px; cursor: pointer; }
 .btn-gold { background: var(--gold); color: #000; border: none; }
 .btn-gold:hover { background: var(--gold-bright); transform: translateY(-3px); }
 .btn-outline { border: 1.5px solid var(--gold); color: var(--gold); background: transparent; }
 
 /* Layout Grid */
 .content-grid { display: grid; grid-template-columns: 2.2fr 1.5fr; gap: 30px; margin-top: 40px; }
-
 .card { background-color: var(--card-bg); padding: 35px; margin-bottom: 30px; position: relative; border-radius: 4px; }
-
 .title-gold { color: var(--gold); font-family: var(--academic-font); font-size: 1.3rem; border-bottom: 1px solid #222; padding-bottom: 10px; margin-bottom: 20px; }
+
+/* Social Section Styling */
+.connect-desc { color: var(--text-dim); margin-bottom: 25px; }
+.social-links { display: flex; gap: 20px; justify-content: flex-start; }
+.social-item {
+    width: 50px; height: 50px; border: 1px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--gold); text-decoration: none; transition: 0.4s;
+    font-size: 1.2rem;
+}
+.social-item:hover {
+    background: var(--gold); color: #000; transform: rotate(360deg);
+}
 
 /* Border Flow Animation */
 .animated-border::before {
-    content: '';
-    position: absolute; inset: 0;
-    border-radius: 4px;
-    padding: 1.5px;
+    content: ''; position: absolute; inset: 0; border-radius: 4px; padding: 1.5px;
     background: linear-gradient(90deg, transparent, transparent, var(--gold), transparent, transparent);
-    background-size: 200% 100%;
-    animation: flow 5s linear infinite;
+    background-size: 200% 100%; animation: flow 5s linear infinite;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
 }
@@ -95,16 +91,10 @@ h1 { font-family: var(--academic-font); font-size: 3.2rem; margin: 10px 0; lette
     100% { background-position: -200% 0; }
 }
 
-.academic-list { padding-left: 20px; color: var(--text-dim); }
 .tag { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 4px 12px; font-size: 0.75rem; margin: 4px; font-weight: 600; }
-
+.academic-list { padding-left: 20px; color: var(--text-dim); }
 .toolkit-list { list-style: none; padding: 0; color: var(--text-dim); }
-.toolkit-list li { margin-bottom: 12px; }
 .toolkit-list i { color: var(--gold); margin-right: 10px; }
-
-/* Form */
-input, textarea { width: 100%; background: #000; border: 1px solid #333; padding: 12px; color: white; margin-bottom: 15px; box-sizing: border-box; }
-.full-width { width: 100%; border: none; }
 
 footer { text-align: center; padding: 50px 0; color: var(--text-dim); font-size: 0.8rem; letter-spacing: 2px; }
 
