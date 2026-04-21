@@ -3,88 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Htet Aung Win | Portfolio</title>
+    <title>Htet Aung Win | Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
     <header>
-        <div class="container">
-            <div class="profile-header">
-                <h1>MR. HTET AUNG WIN</h1>
-                <p class="subtitle">Mathematics Educator | B.Sc. Mathematics (Final Year)</p>
+        <div class="container hero-content">
+            <div class="profile-pic-block">
+                <img src="profile.jpg" alt="Htet Aung Win" class="profile-pic-new">
             </div>
-            
-            <div class="header-buttons">
-                <a href="mailto:Htetaungwin.math@gmail.com" class="btn btn-outline"><i class="fas fa-envelope"></i> Email Me</a>
-                <a href="tel:09758814243" class="btn btn-fill"><i class="fas fa-phone"></i> Call Now</a>
+            <div class="profile-text">
+                <span class="greeting">Mathematics Educator</span>
+                <h1>MR. HTET AUNG WIN</h1>
+                <p class="subtitle-new">Final Year B.Sc. Mathematics Student @ Dagon University</p>
+                <div class="header-buttons-new">
+                    <a href="mailto:Htetaungwin.math@gmail.com" class="btn btn-fill-new"><i class="fas fa-paper-plane"></i> Email Me</a>
+                    <a href="tel:09758814243" class="btn btn-outline-new"><i class="fas fa-phone"></i> Contact Now</a>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="container">
-        <div class="social-links">
-            <a href="mailto:Htetaungwin.math@gmail.com" title="Email"><i class="fas fa-at"></i></a>
-            <a href="#" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" title="GitHub"><i class="fab fa-github"></i></a>
+        <div class="action-bar">
+            <button id="themeToggle" class="btn-icon" title="Switch Mode"><i class="fas fa-moon"></i></button>
         </div>
 
-        <section id="summary" class="card">
-            <h2><i class="fas fa-user-graduate"></i> Professional Summary</h2>
-            <p>Dedicated and tech-savvy Mathematics Educator at <strong>Jewels Future International School</strong>. Expert in Pearson iPrimary curricula and digital education tools. I specialize in making complex mathematical concepts accessible and engaging for students through technology integration.</p>
+        <section class="card glass-effect">
+            <h2><i class="fas fa-id-card"></i> About Me</h2>
+            <p>Mathematics Educator at <strong>Jewels Future International School</strong>. Specializing in Pearson iPrimary & Edexcel IGCSE curriculum.</p>
         </section>
 
         <div class="grid-container">
             <div class="left-column">
-                <section id="experience" class="card">
-                    <h2><i class="fas fa-briefcase"></i> Work Experience</h2>
+                <section class="card">
+                    <h2><i class="fas fa-briefcase"></i> Experience</h2>
                     <div class="job">
                         <div class="job-header">
-                            <h3>Mathematics Educator</h3>
+                            <h3>Math Educator</h3>
                             <span class="badge">Current</span>
                         </div>
                         <p class="company">Jewels Future International School</p>
-                        <ul>
-                            <li>Implementing Pearson iPrimary & Power Maths Framework.</li>
-                            <li>Creating digital learning content using Canva & MS Word.</li>
-                            <li>Personalized student assessment and academic planning.</li>
-                        </ul>
                     </div>
                 </section>
 
-                <section id="projects" class="card">
-                    <h2><i class="fas fa-project-diagram"></i> Projects</h2>
-                    <div class="project-item">
-                        <strong>Year 6 Curriculum Roadmap</strong>
-                        <p>Full-year plan for Books 6A, 6B, and 6C aligned with Myanmar academic cycle.</p>
-                    </div>
+                <section class="card" id="contact">
+                    <h2><i class="fas fa-envelope-open-text"></i> Get In Touch</h2>
+                    <form action="https://formspree.io/f/your-id" method="POST" id="contact-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Full Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="_replyto" placeholder="Email Address" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" rows="4" placeholder="Your Message..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-fill-new w-100">Send Message</button>
+                        <p id="form-status"></p>
+                    </form>
                 </section>
             </div>
 
             <aside class="right-column">
-                <section id="skills" class="card">
+                <section class="card">
                     <h2><i class="fas fa-star"></i> Skills</h2>
                     <div class="tags">
                         <span class="tag">Curriculum Design</span>
-                        <span class="tag">Canva Expert</span>
-                        <span class="tag">Web Deployment</span>
-                        <span class="tag">LaTeX/Equations</span>
+                        <span class="tag">Canva Design</span>
+                        <span class="tag">Web Dev</span>
+                        <span class="tag">LaTeX</span>
                     </div>
-                </section>
-
-                <section id="education" class="card">
-                    <h2><i class="fas fa-university"></i> Education</h2>
-                    <p><strong>B.Sc. Mathematics</strong><br>Dagon University</p>
-                    <p class="status">Final Year Student</p>
                 </section>
             </aside>
         </div>
     </main>
 
+    <button id="scrollToTop"><i class="fas fa-chevron-up"></i></button>
+
     <footer>
-        <p>&copy; 2026 Mr. Htet Aung Win | Built with Passion.</p>
+        <p>&copy; 2026 Mr. Htet Aung Win | Professional Portfolio</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
