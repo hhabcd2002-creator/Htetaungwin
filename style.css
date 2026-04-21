@@ -45,7 +45,18 @@ body {
 .profile-img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 h1 { font-family: var(--academic-font); font-size: 3.2rem; margin: 10px 0; letter-spacing: 2px; }
-.gold-text { color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; }
+
+/* Mathematics Educator Text */
+.gold-text { 
+    color: var(--gold); 
+    text-transform: uppercase; 
+    letter-spacing: 5px; 
+    font-size: 1.1rem; 
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
 .university { font-style: italic; color: var(--text-dim); }
 
 .contact-strip { margin: 25px 0; font-size: 0.9rem; color: var(--text-dim); }
@@ -54,30 +65,53 @@ h1 { font-family: var(--academic-font); font-size: 3.2rem; margin: 10px 0; lette
 
 /* Buttons */
 .action-buttons { display: flex; gap: 15px; margin-top: 30px; }
-.btn { padding: 12px 25px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border-radius: 2px; cursor: pointer; }
+.btn { padding: 12px 25px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; border-radius: 2px; cursor: pointer; display: inline-block; }
 .btn-gold { background: var(--gold); color: #000; border: none; }
-.btn-gold:hover { background: var(--gold-bright); transform: translateY(-3px); }
+.btn-gold:hover { background: var(--gold-bright); transform: translateY(-3px); box-shadow: 0 5px 15px rgba(197, 160, 89, 0.3); }
 .btn-outline { border: 1.5px solid var(--gold); color: var(--gold); background: transparent; }
+.btn-outline:hover { background: rgba(197, 160, 89, 0.1); }
 
-/* Layout Grid */
+/* Interactive 3D Titles */
+.title-gold {
+    color: var(--gold);
+    font-family: var(--academic-font);
+    font-size: 1.4rem;
+    border-bottom: 2px solid #222;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.title-gold:hover {
+    color: var(--gold-bright);
+    border-bottom-color: var(--gold);
+    transform: translateY(-8px) rotateX(10deg);
+    text-shadow: 0 10px 20px rgba(197, 160, 89, 0.5);
+}
+
+/* Content & Summary Styling */
+.summary-text { font-size: 1.05rem; line-height: 1.8; text-align: justify; }
+.summary-text strong { color: var(--gold); font-weight: 600; }
+
 .content-grid { display: grid; grid-template-columns: 2.2fr 1.5fr; gap: 30px; margin-top: 40px; }
 .card { background-color: var(--card-bg); padding: 35px; margin-bottom: 30px; position: relative; border-radius: 4px; }
-.title-gold { color: var(--gold); font-family: var(--academic-font); font-size: 1.3rem; border-bottom: 1px solid #222; padding-bottom: 10px; margin-bottom: 20px; }
 
-/* Social Section Styling */
-.connect-desc { color: var(--text-dim); margin-bottom: 25px; }
-.social-links { display: flex; gap: 20px; justify-content: flex-start; }
+/* Social Links */
+.social-links { display: flex; gap: 15px; margin-top: 20px; }
 .social-item {
-    width: 50px; height: 50px; border: 1px solid var(--gold);
+    width: 45px; height: 45px; border: 1px solid var(--gold);
     display: flex; align-items: center; justify-content: center;
     color: var(--gold); text-decoration: none; transition: 0.4s;
-    font-size: 1.2rem;
 }
-.social-item:hover {
-    background: var(--gold); color: #000; transform: rotate(360deg);
-}
+.social-item:hover { background: var(--gold); color: #000; transform: rotate(360deg); }
 
-/* Border Flow Animation */
+/* Border Animation */
 .animated-border::before {
     content: ''; position: absolute; inset: 0; border-radius: 4px; padding: 1.5px;
     background: linear-gradient(90deg, transparent, transparent, var(--gold), transparent, transparent);
@@ -94,7 +128,9 @@ h1 { font-family: var(--academic-font); font-size: 3.2rem; margin: 10px 0; lette
 .tag { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 4px 12px; font-size: 0.75rem; margin: 4px; font-weight: 600; }
 .academic-list { padding-left: 20px; color: var(--text-dim); }
 .toolkit-list { list-style: none; padding: 0; color: var(--text-dim); }
-.toolkit-list i { color: var(--gold); margin-right: 10px; }
+.toolkit-list li { margin-bottom: 12px; transition: 0.3s; display: flex; align-items: center; }
+.toolkit-list li:hover { color: var(--gold); transform: translateX(5px); }
+.toolkit-list i { color: var(--gold); margin-right: 12px; width: 20px; text-align: center; }
 
 footer { text-align: center; padding: 50px 0; color: var(--text-dim); font-size: 0.8rem; letter-spacing: 2px; }
 
