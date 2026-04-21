@@ -1,64 +1,44 @@
-// 1. Particle.js Configuration (Background Effect From Video)
+// Particle Background Effect
 particlesJS("particles-js", {
   particles: {
-    number: { value: 60, density: { enable: true, value_area: 800 } },
+    number: { value: 50, density: { enable: true, value_area: 800 } },
     color: { value: "#c5a059" },
-    shape: { type: "circle" },
-    opacity: { value: 0.4, random: true, anim: { enable: true, speed: 1, opacity_min: 0.1, sync: false } },
-    size: { value: 2, random: true, anim: { enable: true, speed: 4, size_min: 0.1, sync: false } },
-    line_linked: { enable: true, distance: 150, color: "#c5a059", opacity: 0.2, width: 1 },
-    move: { enable: true, speed: 2, direction: "none", random: true, straight: false, out_mode: "out", bounce: false, attract: { enable: false, rotateX: 600, rotateY: 1200 } },
-  },
-  interactivity: {
-    detect_on: "canvas",
-    events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
-    modes: { grab: { distance: 140, line_linked: { opacity: 0.5 } }, push: { particles_nb: 3 } },
-  },
-  retina_detect: true,
+    opacity: { value: 0.3, random: true },
+    size: { value: 2, random: true },
+    line_linked: { enable: true, distance: 150, color: "#c5a059", opacity: 0.1, width: 1 },
+    move: { enable: true, speed: 1.5, direction: "none", random: true, out_mode: "out" },
+  }
 });
 
-// 2. Smooth Scrolling for Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
-
-// 3. Formspree Handling with Visual Status
+// Form Submission
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
 form.onsubmit = async (e) => {
     e.preventDefault();
     const btn = form.querySelector("button");
-    btn.innerText = "Processing Inquiry...";
-    btn.disabled = true;
-
-    const data = new FormData(e.target);
-    const response = await fetch(e.target.action, {
+    btn.innerText = "Sending...";
+    
+    const data = new FormData(form);
+    const response = await fetch(form.action, {
         method: 'POST',
         body: data,
         headers: { 'Accept': 'application/json' }
     });
 
     if (response.ok) {
-        status.innerHTML = "Formal inquiry received. Check direct email for response.";
-        status.style.color = "#10b981"; // Success Green
+        status.innerText = "Formal Inquiry Sent Successfully!";
+        status.style.color = "#c5a059";
         form.reset();
-        btn.innerText = "Submit Message";
-        btn.disabled = false;
+        btn.innerText = "Send Message";
     } else {
-        status.innerHTML = "An error occurred. Please contact via direct email/phone.";
-        status.style.color = "#ef4444"; // Error Red
-        btn.innerText = "Submit Message";
-        btn.disabled = false;
+        status.innerText = "Error. Please try again.";
+        status.style.color = "red";
+        btn.innerText = "Send Message";
     }
 };
 
-// 4. Scroll-triggered animation for cards
+// Scroll Reveal
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -72,6 +52,6 @@ const observer = new IntersectionObserver((entries) => {
 cards.forEach(card => {
     card.style.opacity = "0";
     card.style.transform = "translateY(20px)";
-    card.style.transition = "0.6s ease-out";
+    card.style.transition = "0.8s ease-out";
     observer.observe(card);
 });
