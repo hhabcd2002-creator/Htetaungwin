@@ -1,80 +1,84 @@
 :root {
-    --bg: #0a0a0a;
-    --card-bg: #141414;
-    --gold: #d4af37;
-    --gold-bright: #f1c40f;
-    --text: #e0e0e0;
+    --bg-color: #0d0e12;
+    --card-bg: #16181d;
+    --gold: #c5a059;
+    --gold-bright: #e5c07b;
+    --text-primary: #f0f0f0;
     --text-dim: #a0a0a0;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
+    background-color: var(--bg-color);
+    color: var(--text-primary);
     margin: 0;
     line-height: 1.6;
 }
 
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
 
-/* Header & Profile */
-header {
-    background: linear-gradient(135deg, #000 0%, #1a1a1a 100%);
-    padding: 80px 0 60px 0;
-    border-bottom: 2px solid var(--gold);
-    text-align: left;
+/* Header & Hero */
+.hero-section {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), radial-gradient(circle at top right, #1e222b, #0d0e12);
+    padding: 100px 0;
+    border-bottom: 1px solid var(--gold);
 }
 
-.hero-content { display: flex; align-items: center; gap: 50px; flex-wrap: wrap; }
+.hero-container { display: flex; align-items: center; gap: 60px; flex-wrap: wrap; }
 
-.profile-pic-block { position: relative; width: 220px; height: 220px; }
-.profile-pic-gold {
-    width: 100%; height: 100%; border-radius: 20px;
-    object-fit: cover; border: 3px solid var(--gold); position: relative; z-index: 2;
-}
-.gold-glow {
-    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--gold); filter: blur(30px); opacity: 0.2; z-index: 1;
+.frame {
+    width: 250px; height: 320px;
+    border: 1px solid var(--gold);
+    padding: 10px;
+    background: #000;
 }
 
-h1 { font-family: 'Playfair Display', serif; font-size: 3rem; margin: 10px 0; color: white; letter-spacing: 1px; }
-.gold-text { color: var(--gold); }
-.gold-tag { color: var(--gold); font-weight: 600; letter-spacing: 3px; font-size: 0.9rem; }
+.frame img { width: 100%; height: 100%; object-fit: cover; }
 
-.quick-contact { display: flex; flex-direction: column; gap: 8px; margin: 15px 0; color: var(--text-dim); font-size: 0.9rem; }
-.quick-contact i { color: var(--gold); width: 20px; }
+h1 { font-family: 'Cinzel', serif; font-size: 3.5rem; margin: 10px 0; letter-spacing: 2px; color: #fff; }
+.gold { color: var(--gold); }
+.title-gold { color: var(--gold); font-family: 'Cinzel', serif; font-size: 1.4rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; }
+
+.university { font-family: 'Lora', serif; font-style: italic; font-size: 1.2rem; color: var(--text-dim); }
+
+.contact-info { margin: 20px 0; font-size: 0.9rem; color: var(--text-dim); }
+.contact-info span { margin-right: 25px; }
+.contact-info i { color: var(--gold); margin-right: 8px; }
 
 /* Buttons */
-.header-btns { display: flex; gap: 15px; margin-top: 25px; }
-.btn { padding: 12px 28px; border-radius: 5px; text-decoration: none; font-weight: 600; transition: 0.3s; }
-.btn-gold { background: var(--gold); color: black; border: none; }
-.btn-gold:hover { background: var(--gold-bright); transform: translateY(-3px); }
-.btn-outline { border: 1.5px solid var(--gold); color: var(--gold); }
-.btn-outline:hover { background: rgba(212, 175, 55, 0.1); }
+.hero-actions { display: flex; gap: 15px; margin-top: 30px; }
+.btn { padding: 12px 30px; border-radius: 2px; text-decoration: none; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+.btn-primary { background: var(--gold); color: #000; }
+.btn-primary:hover { background: var(--gold-bright); transform: translateY(-3px); }
+.btn-secondary { border: 1px solid var(--gold); color: var(--gold); }
+.btn-secondary:hover { background: rgba(197, 160, 89, 0.1); }
 
-/* Grid & Cards */
-.main-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 30px; margin-top: 40px; }
-.card { background: var(--card-bg); padding: 30px; border-radius: 12px; margin-bottom: 25px; border: 1px solid #222; }
-.section-title { font-size: 1.4rem; border-bottom: 1px solid #333; padding-bottom: 10px; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+/* Layout Grid */
+.academic-grid { display: grid; grid-template-columns: 2fr 1.2fr; gap: 40px; margin-top: 40px; }
 
-.project-card { border-left: 3px solid var(--gold); padding-left: 15px; margin-bottom: 20px; }
-.badge { background: var(--gold); color: black; padding: 2px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: 700; }
+.card { background-color: var(--card-bg); padding: 40px; border-radius: 4px; margin-bottom: 30px; border: 1px solid #222; }
 
-.tag { display: inline-block; background: rgba(212, 175, 55, 0.1); color: var(--gold); border: 1px solid var(--gold); padding: 5px 12px; border-radius: 4px; margin: 5px; font-size: 0.85rem; }
+.summary-text { font-family: 'Lora', serif; font-size: 1.1rem; color: #ccc; }
 
-.toolkit-list { list-style: none; padding: 0; }
-.toolkit-list li { margin-bottom: 12px; font-size: 0.95rem; }
-.toolkit-list i { color: var(--gold); margin-right: 10px; }
+.academic-list { padding-left: 20px; color: var(--text-dim); }
+.academic-list li { margin-bottom: 12px; }
 
-/* Form */
-input, textarea { width: 100%; padding: 12px; background: #1a1a1a; border: 1px solid #333; color: white; margin-bottom: 15px; border-radius: 5px; }
-.full-width { width: 100%; cursor: pointer; }
+.project-item { border-left: 3px solid var(--gold); padding-left: 20px; margin-bottom: 25px; }
 
-footer { text-align: center; padding: 60px 0; border-top: 1px solid #222; font-size: 0.9rem; color: var(--text-dim); }
+.skill-tag { display: inline-block; border: 1px solid var(--gold); color: var(--gold); padding: 5px 12px; font-size: 0.8rem; margin: 5px; text-transform: uppercase; }
 
-@media (max-width: 850px) {
-    .main-grid { grid-template-columns: 1fr; }
-    .hero-content { flex-direction: column; text-align: center; }
-    .quick-contact { align-items: center; }
-    .header-btns { justify-content: center; }
+.tool-list { list-style: none; padding: 0; color: var(--text-dim); }
+.tool-list li { margin-bottom: 15px; }
+.tool-list i { color: var(--gold); margin-right: 12px; }
+
+/* Contact Form */
+input, textarea { width: 100%; background: #000; border: 1px solid #333; padding: 12px; color: #fff; margin-bottom: 15px; box-sizing: border-box; font-family: inherit; }
+.full-width { width: 100%; cursor: pointer; border: none; }
+
+.site-footer { text-align: center; padding: 60px 0; border-top: 1px solid #222; color: var(--text-dim); font-size: 0.8rem; letter-spacing: 2px; }
+
+@media (max-width: 900px) {
+    .academic-grid { grid-template-columns: 1fr; }
+    .hero-container { flex-direction: column; text-align: center; }
+    h1 { font-size: 2.5rem; }
 }
