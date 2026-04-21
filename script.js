@@ -10,7 +10,7 @@ particlesJS("particles-js", {
   }
 });
 
-// Scroll Reveal Animation
+// Scroll Reveal Animation for Cards
 const cards = document.querySelectorAll('.card');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -26,4 +26,14 @@ cards.forEach(card => {
     card.style.transform = "translateY(20px)";
     card.style.transition = "0.8s ease-out";
     observer.observe(card);
+});
+
+// Smooth Scroll for Navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
