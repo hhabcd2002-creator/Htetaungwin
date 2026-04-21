@@ -6,117 +6,98 @@
     <title>Htet Aung Win | Academic Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Lora:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="hero-section">
-        <div class="container hero-container">
-            <div class="hero-image">
-                <div class="frame">
-                    <img src="1.png" alt="Mr. Htet Aung Win">
+    <div id="particles-js"></div>
+
+    <main class="main-wrapper">
+        <header class="hero-section">
+            <div class="container hero-container">
+                <div class="profile-container">
+                    <div class="profile-frame">
+                        <img src="1.png" alt="Mr. Htet Aung Win" id="profile-img">
+                        <div class="frame-glow"></div>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <span class="academic-title gold-text">Academic Educator</span>
+                    <h1>MR. HTET AUNG WIN</h1>
+                    <p class="university">B.Sc. Mathematics (Final Year) | Dagon University</p>
+                    <div class="contact-strip">
+                        <span><i class="fas fa-phone-alt"></i> 09758814243</span>
+                        <span><i class="fas fa-envelope"></i> Htetaungwin.math@gmail.com</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Yangon, Myanmar</span>
+                    </div>
+                    <div class="action-buttons">
+                        <a href="#contact" class="btn btn-gold">Contact Me</a>
+                        <a href="mailto:Htetaungwin.math@gmail.com" class="btn btn-outline">Send Inquiry</a>
+                    </div>
                 </div>
             </div>
-            <div class="hero-content">
-                <span class="label gold">Mathematics Educator</span>
-                <h1>MR. HTET AUNG WIN</h1>
-                <p class="university">B.Sc. Mathematics (Final Year) | Dagon University</p>
-                <div class="contact-info">
-                    <span><i class="fas fa-phone"></i> 09758814243</span>
-                    <span><i class="fas fa-envelope"></i> Htetaungwin.math@gmail.com</span>
-                    <span><i class="fas fa-map-marker-alt"></i> Yangon, Myanmar</span>
-                </div>
-                <div class="hero-actions">
-                    <a href="#contact" class="btn btn-primary">Contact Me</a>
-                    <a href="mailto:Htetaungwin.math@gmail.com" class="btn btn-secondary">Email Inquiry</a>
-                </div>
-            </div>
-        </div>
-    </header>
+        </header>
 
-    <main class="container">
-        <section class="section card">
-            <h2 class="title-gold"><i class="fas fa-user-tie"></i> Professional Summary</h2>
-            <p class="summary-text">
-                Dedicated and tech-savvy Mathematics Educator with a strong academic background. Experienced in international curricula, including <strong>Pearson iPrimary and Edexcel IGCSE</strong>. Expert in creating engaging lesson plans and digital educational content. Passionate about integrating technology into the classroom to enhance student learning outcomes.
-            </p>
-        </section>
-
-        <div class="academic-grid">
-            <div class="main-column">
-                <section class="section card">
-                    <h2 class="title-gold"><i class="fas fa-chalkboard-teacher"></i> Teaching Experience</h2>
-                    <div class="exp-item">
-                        <div class="exp-header">
-                            <h3>Mathematics Educator</h3>
-                            <span class="badge">Present</span>
-                        </div>
-                        <p class="institution">Jewels Future International School</p>
-                        <ul class="academic-list">
-                            <li>Designing innovative lesson plans aligned with Pearson iPrimary & Power Maths standards.</li>
-                            <li>Utilizing modern pedagogical skills and EdTech integration for enhanced learning outcomes.</li>
-                            <li>Collaborating on cross-curricular projects to promote a holistic educational approach.</li>
-                            <li>Applying differentiated instruction strategies and tailored materials for diverse student needs.</li>
-                            <li>Maintaining classroom discipline and fostering supportive student relationships.</li>
-                            <li>Leading extracurricular activities to encourage critical thinking beyond the curriculum.</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="section card">
-                    <h2 class="title-gold"><i class="fas fa-project-diagram"></i> Key Projects</h2>
-                    <div class="project-item">
-                        <h4>Mathematics Curriculum Development (Year 6)</h4>
-                        <p>Designed a comprehensive 12-month academic roadmap for the Myanmar school year. Developed structured lesson plans for Book 6A, 6B, and 6C with optimized exam preparation strategies.</p>
-                    </div>
-                    <div class="project-item">
-                        <h4>Web Development & Deployment</h4>
-                        <p>Customized and deployed interactive educational websites using GitHub and Vercel, ensuring digital accessibility for academic resources.</p>
-                    </div>
-                </section>
+        <section class="container content-grid">
+            <div class="card summary-card animated-border">
+                <h2 class="title-gold"><i class="fas fa-id-card-alt"></i> Professional Philosophy</h2>
+                <p>Dedicated and tech-savvy Mathematics Educator. Experienced in international curricula, including Pearson iPrimary and Edexcel IGCSE. Expert in creating engaging lesson plans and digital educational content. Focused on fostering critical thinking through technology integration.</p>
             </div>
 
-            <aside class="sidebar">
-                <section class="section card">
-                    <h2 class="title-gold"><i class="fas fa-star"></i> Core Competencies</h2>
-                    <div class="skills-container">
-                        <span class="skill-tag">Pearson iPrimary</span>
-                        <span class="skill-tag">Edexcel Framework</span>
-                        <span class="skill-tag">Assessment Design</span>
-                        <span class="skill-tag">Lesson Planning</span>
-                        <span class="skill-tag">Differentiated Instruction</span>
-                        <span class="skill-tag">Canva Design</span>
-                        <span class="skill-tag">Tech Integration</span>
-                    </div>
-                </section>
-
-                <section class="section card">
-                    <h2 class="title-gold"><i class="fas fa-tools"></i> Technical Toolkit</h2>
-                    <ul class="tool-list">
-                        <li><i class="fab fa-microsoft"></i> MS Word (Advanced Equations)</li>
-                        <li><i class="fab fa-github"></i> Git & GitHub</li>
-                        <li><i class="fas fa-server"></i> Vercel Deployment</li>
-                        <li><i class="fas fa-shield-alt"></i> Cybersecurity Basics</li>
+            <div class="card experience-card animated-border">
+                <h2 class="title-gold"><i class="fas fa-chalkboard-teacher"></i> Teaching Experience</h2>
+                <div class="exp-entry">
+                    <h3>Mathematics Faculty</h3>
+                    <p class="institution">Jewels Future International School | <span>Present</span></p>
+                    <ul class="academic-list">
+                        <li> Pearson iPrimary & Power Maths implementation.</li>
+                        <li> EdTech integration via Canva & MS Equation Editor.</li>
+                        <li> Assessment design & strategic academic planning.</li>
+                        <li> Extracurricular leadership for critical thinking.</li>
                     </ul>
-                </section>
+                </div>
+            </div>
 
-                <section class="section card" id="contact">
-                    <h2 class="title-gold"><i class="fas fa-paper-plane"></i> Contact</h2>
-                    <form action="https://formspree.io/f/your-id" method="POST" id="contact-form">
-                        <input type="text" name="name" placeholder="Full Name" required>
-                        <input type="email" name="email" placeholder="Email Address" required>
-                        <textarea name="message" rows="4" placeholder="How can I help you?" required></textarea>
-                        <button type="submit" class="btn btn-primary full-width">Send Message</button>
-                    </form>
-                </section>
+            <aside class="sidebar-cards">
+                <div class="card skills-card animated-border">
+                    <h2 class="title-gold"><i class="fas fa-star"></i> Core Competencies</h2>
+                    <div class="skills-tags">
+                        <span class="tag">Pearson iPrimary</span>
+                        <span class="tag">Edexcel IGCSE</span>
+                        <span class="tag">Assessment Design</span>
+                        <span class="tag">LaTeX Formatting</span>
+                        <span class="tag">Cybersecurity Basics</span>
+                    </div>
+                </div>
+
+                <div class="card toolkit-card animated-border">
+                    <h2 class="title-gold"><i class="fas fa-tools"></i> Technical Toolkit</h2>
+                    <ul class="toolkit-list">
+                        <li><i class="fab fa-microsoft"></i> MS Office (Equations)</li>
+                        <li><i class="fab fa-github"></i> GitHub & Git</li>
+                        <li><i class="fas fa-rocket"></i> Vercel Deployment</li>
+                    </ul>
+                </div>
             </aside>
-        </div>
+
+            <section class="card contact-card animated-border" id="contact">
+                <h2 class="title-gold"><i class="fas fa-paper-plane"></i> Formal Inquiry</h2>
+                <form action="https://formspree.io/f/your-id" method="POST" class="academic-form">
+                    <input type="text" name="name" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email Address" required>
+                    <textarea name="message" rows="4" placeholder="Your Inquiry..." required></textarea>
+                    <button type="submit" class="btn btn-gold full-width">Submit Message</button>
+                    <p id="form-status"></p>
+                </form>
+            </section>
+        </section>
     </main>
 
-    <footer class="site-footer">
-        <p>&copy; 2026 Mr. Htet Aung Win | <span class="gold">Academic Portfolio</span></p>
+    <footer>
+        <p>&copy; 2026 Mr. Htet Aung Win | MATHEMATICS DEPARTMENT</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
